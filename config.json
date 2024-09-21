@@ -3,9 +3,12 @@
     "subTitle":"Linux系统的使用记录和随笔",
     "avatarUrl":"https://github.com/yinxiuqu/yinxiuqu.github.io/blob/main/%E7%89%A7%E7%AB%A5%E7%9F%AD%E7%AC%9B.jpg",
     "GMEEK_VERSION":"last",
-    "StartSite":"2024-09-21",
+    "StartSite":"21/09/2024",
     "displayTitle":"牧童短笛",
     "homeUrl":"https://yinxiuqu.github.io",
     "exlink":{"我的哔站":"https://space.bilibili.com/692347416"},
+    "i18n":"CN",
+    "UTC":8,
+    "singlePage":["about"],
     "bottomText":"转载请注明出处"
 }
