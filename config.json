@@ -7,7 +7,7 @@
     "exlink":{"我的哔站":"https://space.bilibili.com/692347416"},
     "i18n":"CN",
     "UTC":8,
-    "singlePage":["About", "Links"],
+    "singlePage":["about", "link"],
     "email":"yinxiuqu@outlook.com",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekBSZ.js'></script>",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
