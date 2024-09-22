@@ -1,0 +1,2 @@
+原文地址：[https://wiki.ubuntu.org.cn/%E5%BC%80%E6%BA%90%E6%A8%A1%E6%9D%BF%E5%BA%93_Libreoffice_Writer#.E4.BC.81.E4.BA.8B.E4.B8.9A.E6.96.87.E6.A1.88.EF.BC.88.E6.9A.82.E5.AE.9A.E5.90.8D.EF.BC.89](https://wiki.ubuntu.org.cn/%E5%BC%80%E6%BA%90%E6%A8%A1%E6%9D%BF%E5%BA%93_Libreoffice_Writer#.E4.BC.81.E4.BA.8B.E4.B8.9A.E6.96.87.E6.A1.88.EF.BC.88.E6.9A.82.E5.AE.9A.E5.90.8D.EF.BC.89)
+在Ubuntu论坛发现的LibreOffice开源模板，有长书本模板、公文模板、作文格子、试卷模板等等，使用LibreOffice的可以借鉴一下。
