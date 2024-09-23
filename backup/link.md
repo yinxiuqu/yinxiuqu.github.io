@@ -10,6 +10,7 @@
 [LaTeX工作室](https://www.latexstudio.net/)
 [我的Emacs设置](https://github.com/yinxiuqu/.emacs.d)
 [本博客的代码仓库](https://github.com/yinxiuqu/yinxiuqu.github.io)
+[欧路词典（完美支持Linux）](https://www.eudic.net)
 [永中Linux版](https://www.yozosoft.com/subject-yozo2019.html)
 [WPS for Linux](https://linux.wps.cn/)
 [QQ for Linux](https://im.qq.com/linuxqq/index.shtml)
