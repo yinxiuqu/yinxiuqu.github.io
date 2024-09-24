@@ -1,2 +1,1 @@
-[英语DJ音标第15版.pdf](https://github.com/yinxiuqu/yinxiuqu.github.io/blob/main/attachments/%E8%8B%B1%E8%AF%ADDJ%E9%9F%B3%E6%A0%87%E7%AC%AC15%E7%89%88.pdf)
-<a href="https://github.com/yinxiuqu/yinxiuqu.github.io/blob/main/attachments/%E8%8B%B1%E8%AF%ADDJ%E9%9F%B3%E6%A0%87%E7%AC%AC15%E7%89%88.pdf" target="_blank">英语DJ音标第15版.pdf.</a>
+[英语DJ音标第15版.pdf](https://www.jianguoyun.com/p/DenGFNwQpM_0CRiwtdgFIAA)
