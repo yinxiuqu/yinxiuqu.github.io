@@ -1,0 +1,1 @@
+[英语DJ音标第15版.pdf](https://github.com/yinxiuqu/yinxiuqu.github.io/edit/main/attachments/%E8%8B%B1%E8%AF%ADDJ%E9%9F%B3%E6%A0%87%E7%AC%AC15%E7%89%88.pdf)
