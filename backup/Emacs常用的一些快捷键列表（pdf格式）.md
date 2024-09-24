@@ -1,1 +1,1 @@
-[refcard.pdf](https://oto.lv.tab.digital/s/dSiHfJ9bfjDFWSX/download/refcard.pdf)
+[refcard.pdf](https://www.jianguoyun.com/p/DX3UlU8Qo8_0CRj99uMFIAA)
