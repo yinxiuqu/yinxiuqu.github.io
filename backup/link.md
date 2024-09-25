@@ -7,6 +7,7 @@
 [Debian中文论坛](https://forums.debiancn.org/)
 [Ubuntu中文论坛](https://forum.ubuntu.org.cn/)
 [LibreOffice中文社区](https://www.libreofficechina.org/)
+[星火社区论坛](https://bbs.spark-app.store/)
 [Oneleaf, Online LaTeX Editor](https://www.overleaf.com)
 [remacs的世界](https://remacs.fun/)
 [LaTeX工作室](https://www.latexstudio.net/)
