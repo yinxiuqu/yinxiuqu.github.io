@@ -83,7 +83,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>在编辑大型文件时，通常采用结构化编辑，将主源文件和各章节的子源文件分开编辑。在编辑子源文件时，想查看编译效果，通常要回到主源文件中进行编译。如果在子源文件最后插入%%% TeX-master: "../main"，双引号内输入主源文件位置，则可以不切换到主源文件，直接在子源文件中编译，这样就更便利了。<br>
+<div class="markdown-body" id="postBody"><p>在编辑大型文件时，通常采用结构化编辑，将主源文件和各章节的子源文件分开编辑。在编辑子源文件时，想查看编译效果，通常要回到主源文件中进行编译。如果在子源文件最后插入%%% TeX-master: "../main"，双引号内输入主源文件路径位置，重启buffer后则能不切换到主源文件，直接在子源文件中编译，这样就更便利了。<br>
 此外，还看到有人添加以下一些内容：</p>
 <div class="highlight highlight-text-tex-latex"><pre class="notranslate"><span class="pl-c"><span class="pl-c">%</span>%% Local Variables:</span>
 <span class="pl-c"><span class="pl-c">%</span>%% mode: latex</span>
