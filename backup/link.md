@@ -1,3 +1,5 @@
+[本博客的代码仓库](https://github.com/yinxiuqu/yinxiuqu.github.io)
+[Rust语言圣经](https://course.rs)
 [Github](https://github.com)
 [A scalable set of icons handcrafted by GitHub.](https://primer.style/foundations/icons#16px)
 [Emacs China](https://emacs-china.org/)
@@ -9,7 +11,6 @@
 [remacs的世界](https://remacs.fun/)
 [LaTeX工作室](https://www.latexstudio.net/)
 [我的Emacs设置](https://github.com/yinxiuqu/.emacs.d)
-[本博客的代码仓库](https://github.com/yinxiuqu/yinxiuqu.github.io)
 [欧路词典（完美支持Linux）](https://www.eudic.net)
 [永中Linux版](https://www.yozosoft.com/subject-yozo2019.html)
 [WPS for Linux](https://linux.wps.cn/)
