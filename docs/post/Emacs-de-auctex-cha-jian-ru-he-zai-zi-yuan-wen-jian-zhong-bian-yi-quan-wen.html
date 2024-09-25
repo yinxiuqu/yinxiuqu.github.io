@@ -89,24 +89,19 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <span class="pl-c"><span class="pl-c">%</span>%% mode: latex</span>
 <span class="pl-c"><span class="pl-c">%</span>%% TeX-master: “…/csuthesis_main”</span>
 <span class="pl-c"><span class="pl-c">%</span>%% TeX-engine: xetex</span>
-<span class="pl-c"><span class="pl-c">%</span>%% End:</span>
-
-还有人为了自动执行多步编译使用[Arara](https://github.com/cereda/arara)，在init-latex中添加如下设置：
-<span class="pl-s"><span class="pl-pds">``</span>`lisp</span>
-<span class="pl-s">(eval-after-load <span class="pl-pds">"</span></span>tex"
-  <span class="pl-ii">'(add-to-list '</span>TeX-command-list
-        '("Arara" <span class="pl-ii">"arara %s"</span> TeX-run-TeX nil t :help <span class="pl-ii">"Run Arara."</span>)))
-
-参见[Arara integration in Emacs](http://emacs.stackexchange.com/questions/9715/arara-integration-in-emacs)。Arara是Latex的扩展包，TexLive2014默认集成。然后在需要编译的主文档顶部添加需要顺序执行的指令。比如
-<span class="pl-s"><span class="pl-pds">``</span>`latex</span>
-<span class="pl-s"><span class="pl-c"><span class="pl-c">%</span> arara: pdflatex</span></span>
-<span class="pl-s"><span class="pl-c"><span class="pl-c">%</span> arara: bibtex</span></span>
-<span class="pl-s"><span class="pl-c"><span class="pl-c">%</span> arara: pdflatex</span></span>
-<span class="pl-s"><span class="pl-c"><span class="pl-c">%</span> arara: pdflatex</span></span>
-<span class="pl-s"><span class="pl-c1">\documentclass</span> {article}</span>
-<span class="pl-s">...</span>
-<span class="pl-s"></span>
-<span class="pl-s">配置好后，编译文档时，键入C-c C-c arara即可。</span></pre></div></div>
+<span class="pl-c"><span class="pl-c">%</span>%% End:</span></pre></div>
+<p>还有人为了自动执行多步编译使用<a href="https://github.com/cereda/arara">Arara</a>，在init-latex中添加如下设置：</p>
+<div class="highlight highlight-source-commonlisp"><pre class="notranslate">(eval-after-load <span class="pl-s"><span class="pl-pds">"</span>tex<span class="pl-pds">"</span></span>
+  <span class="pl-c1">'</span>(add-to-list <span class="pl-c1">'</span>TeX-command-list
+        <span class="pl-c1">'</span>(<span class="pl-s"><span class="pl-pds">"</span>Arara<span class="pl-pds">"</span></span> <span class="pl-s"><span class="pl-pds">"</span>arara %s<span class="pl-pds">"</span></span> TeX-run-TeX <span class="pl-c1">nil</span> <span class="pl-c1">t</span> <span class="pl-en">:help</span> <span class="pl-s"><span class="pl-pds">"</span>Run Arara.<span class="pl-pds">"</span></span>)))</pre></div>
+<p>参见<a href="http://emacs.stackexchange.com/questions/9715/arara-integration-in-emacs" rel="nofollow">Arara integration in Emacs</a>。Arara是Latex的扩展包，TexLive2014默认集成。然后在需要编译的主文档顶部添加需要顺序执行的指令。比如</p>
+<div class="highlight highlight-text-tex-latex"><pre class="notranslate"><span class="pl-c"><span class="pl-c">%</span> arara: pdflatex</span>
+<span class="pl-c"><span class="pl-c">%</span> arara: bibtex</span>
+<span class="pl-c"><span class="pl-c">%</span> arara: pdflatex</span>
+<span class="pl-c"><span class="pl-c">%</span> arara: pdflatex</span>
+<span class="pl-c1">\documentclass</span> {article}
+...</pre></div>
+<p>配置好后，编译文档时，键入C-c C-c arara即可。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，谢谢！</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
