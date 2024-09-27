@@ -1,5 +1,6 @@
 [本博客的代码仓库](https://github.com/yinxiuqu/yinxiuqu.github.io)
 [Rust语言圣经](https://course.rs)
+[Rust中文社区](https://rustcc.cn/)
 [Github](https://github.com)
 [LoongTeX在线编译](https://app.loongtex.com/LaTeX/projects)
 [Oneleaf, Online LaTeX Editor](https://www.overleaf.com)
