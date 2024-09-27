@@ -2,7 +2,7 @@
 先为Python安装好模块pip install pdf2docx，然后运行几行代码：
 
 ```python
-from pdf2docx import Coverter
+from pdf2docx import Converter
 pdf_file = 'pdf文件路径'
 docx_file = '输出Word文件的路径'
 cv = Converter(pdf_file)
