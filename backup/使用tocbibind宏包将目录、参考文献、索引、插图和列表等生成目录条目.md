@@ -1,4 +1,4 @@
-原文地址：[https://www.latexstudio.net/hulatex/package/content-2.htm](https://www.latexstudio.net/hulatex/package/content-2.htm)
+参考原文地址：[https://www.latexstudio.net/hulatex/package/content-2.htm](https://www.latexstudio.net/hulatex/package/content-2.htm)
 
 LaTeX编译pdf文件时，目录自身不会添加到目录，参考文献、索引、插图和列表等也不会自动加入到目录中，可以使用tocbibind宏包将这些项的标题和页码自动加入目录。该宏包还有以下选项可以取消对应的项进入目录：
 | 选项 | 作用 |
