@@ -73,7 +73,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>早几天因为换了emacs包的源地址，新源里面的auctex插件版本从原来的老版本突然升级到了14.0.7版。很久没有操作过卸载软件了，我竟然把.emacs.d/elpa/auctex文件夹直接删除，然后就开始安装新版本。安装过程中总是造成emacs卡死，不能彻底完成安装。不得不反复安装，偶尔有一两次安装成功了。但是打开emacs就会提示错误：<br>
+<div class="markdown-body" id="postBody"><p>早几天因为换了emacs包的源地址，新源里面的auctex插件版本从原来的老版本突然升级到了14.0.7版。很久没有操作过卸载emacs的插件包了，我竟然把.emacs.d/elpa/auctex文件夹直接删除，然后就开始安装新版本。安装过程中总是造成emacs卡死，不能彻底完成安装。不得不反复安装，偶尔有一两次安装成功了。但是打开emacs就会提示错误：<br>
 <code class="notranslate">File mode specification error: (error Autoloading file /home/yinxiuqu/.emacs.d/elpa/auctex-14.0.7/latex.el failed to define function TeX-latex-mode) [3 times]</code><br>
 而且打开tex源文件，完全不能编译，不能打开LaTeX-mode。 反复卸载重装多次，这个错误一直存在。在各大论坛和QQ群里请求大佬们帮忙诊断，也没有合适的回复。不得不打开auctex包的官方主页，找到开发维护者邮箱，发邮件进行咨询。auctex的开发维护者非常热心，回复我第一封邮件要我想办法确保新版auctex的安装过程的确完成。我确认安装过程确实完成后仍然存在那个错误。第二封邮件要我把auctex卸载后，再把/usr/share/emacs/site-lisp/文件夹下的auctex.el、preview-latex.el和tex-site.el这三个文件删除之后，再重新安装后，再把配置文件中的<code class="notranslate">(load "auctex.el" nil t t)、(load "preview-latex.el" nil t t)</code>这两行删除，新的版本不需要这两行配置了。我按照操作之后，重新启动emacs，那个老顽固错误不再出现了。emacs的启动log里面，没有提示任何错误了。但是，当我切换到tex源文件所在的buffer之后，仍然不能编译。于是又去了第三封邮件咨询，开发维护者认为我使用了desktop.el保存了以前关闭的tex源文件的buffer，因此让我把tex源所在的旧buffer关闭之后，再重新直接打开tex源文件。我完全按照操作之后，auctex终于恢复正常了！<br>
 整个事件当中，是由我的不当删除emacs插件包auctex引发的：不应该直接将.emacs.d/elpa/auctex文件夹删除，而是应该用M-x package-delege  RET auctex 这类方式删除。否则可能造成删除不完全，重新安装新版本后会产生冲突。</p></div>
