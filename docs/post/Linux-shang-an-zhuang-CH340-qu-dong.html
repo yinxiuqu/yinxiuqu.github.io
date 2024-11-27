@@ -94,12 +94,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>解压缩后，从Linux终端进入解压缩后的/driver/文件夹。运行如下操作：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">make</pre></div>
 <p>如果正常运行的话，会产生一个名为"ch341.ko"的文件。</p>
-<h2>临时载入驱动</h2>
+<h1>临时载入驱动</h1>
 <p>接下来，如果你只想每次连接CH340设备的时候才载入驱动，可以如下操作：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">sudo make load</pre></div>
 <p>连接结束后，运行如下操作卸载驱动：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">sudo make unload</pre></div>
-<h2>永久载入驱动</h2>
+<h1>永久载入驱动</h1>
 <p>如果想让CH340驱动永久运行在系统上，可以如下操作：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">sudo make install</pre></div>
 <p>如果要永久卸载CH340驱动，可以如下操作：</p>

@@ -13,7 +13,7 @@ lsusb
 make
 ```
 如果正常运行的话，会产生一个名为"ch341.ko"的文件。
-## 临时载入驱动
+# 临时载入驱动
 接下来，如果你只想每次连接CH340设备的时候才载入驱动，可以如下操作：
 ```shell
 sudo make load
@@ -22,7 +22,7 @@ sudo make load
 ```shell
 sudo make unload
 ```
-## 永久载入驱动
+# 永久载入驱动
 如果想让CH340驱动永久运行在系统上，可以如下操作：
 ```shell
 sudo make install
