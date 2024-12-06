@@ -88,9 +88,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="highlight highlight-source-python"><pre class="notranslate"><span class="pl-k">from</span> <span class="pl-s1">pdf2docx</span> <span class="pl-k">import</span> <span class="pl-v">Converter</span>
 <span class="pl-s1">pdf_file</span> <span class="pl-c1">=</span> <span class="pl-s">'pdf文件路径'</span>
 <span class="pl-s1">docx_file</span> <span class="pl-c1">=</span> <span class="pl-s">'输出Word文件的路径'</span>
-<span class="pl-s1">cv</span> <span class="pl-c1">=</span> <span class="pl-v">Converter</span>(<span class="pl-s1">pdf_file</span>)
-<span class="pl-s1">cv</span>.<span class="pl-en">convert</span>(<span class="pl-s1">docx_file</span>, <span class="pl-s1">start</span><span class="pl-c1">=</span><span class="pl-c1">0</span>, <span class="pl-s1">end</span><span class="pl-c1">=</span><span class="pl-c1">None</span>)
-<span class="pl-s1">cv</span>.<span class="pl-en">close</span>()</pre></div></div>
+<span class="pl-s1">cv</span> <span class="pl-c1">=</span> <span class="pl-en">Converter</span>(<span class="pl-s1">pdf_file</span>)
+<span class="pl-s1">cv</span>.<span class="pl-c1">convert</span>(<span class="pl-s1">docx_file</span>, <span class="pl-s1">start</span><span class="pl-c1">=</span><span class="pl-c1">0</span>, <span class="pl-s1">end</span><span class="pl-c1">=</span><span class="pl-c1">None</span>)
+<span class="pl-s1">cv</span>.<span class="pl-c1">close</span>()</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，谢谢！</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
@@ -152,7 +152,7 @@ document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
 cmButton=document.getElementById("cmButton");
     span=document.createElement("span");
     span.setAttribute("class","Counter");
-    span.innerHTML="2";
+    span.innerHTML="3";
     cmButton.appendChild(span);
 
 
