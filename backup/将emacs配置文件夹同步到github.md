@@ -1,8 +1,9 @@
 # 1.在本地emacs配置文件夹初始化为一个新的Git仓库：
 ```Bash
-cd /path/to/your/folder
+cd /home/yourdir/.emacs.d/
 git init
 ```
+yourdir更换为Linux系统下的用户主目录名
 # 2.添加远程仓库（如果已有远程仓库）：
 ```Bash
 git remote add origin <remote_repository_URL>
