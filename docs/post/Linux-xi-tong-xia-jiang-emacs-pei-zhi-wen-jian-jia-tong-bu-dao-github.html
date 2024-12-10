@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 1.在本地emacs配置文件夹初始化为一个新的Git仓库：
+<meta name="description" content="# 1.将本地emacs配置文件夹初始化为一个新的Git仓库：
 ```Bash
 cd /home/yourdir/.emacs.d/
 git init
@@ -22,7 +22,7 @@ git remote add origin <remote_repository_URL>
 ```
 替换 <remote_repository_URL> 为要同步的远程仓库URL。">
 <meta property="og:title" content="Linux系统下将emacs配置文件夹同步到github">
-<meta property="og:description" content="# 1.在本地emacs配置文件夹初始化为一个新的Git仓库：
+<meta property="og:description" content="# 1.将本地emacs配置文件夹初始化为一个新的Git仓库：
 ```Bash
 cd /home/yourdir/.emacs.d/
 git init
@@ -103,7 +103,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>1.在本地emacs配置文件夹初始化为一个新的Git仓库：</h1>
+<div class="markdown-body" id="postBody"><h1>1.将本地emacs配置文件夹初始化为一个新的Git仓库：</h1>
 <div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c1">cd</span> /home/yourdir/.emacs.d/
 git init</pre></div>
 <p>yourdir更换为Linux系统下的用户主目录名</p>
@@ -118,7 +118,7 @@ git init</pre></div>
 git commit -m <span class="pl-s"><span class="pl-pds">"</span>Your commit message<span class="pl-pds">"</span></span>
 git push origin master</pre></div>
 <p>替换 master 为要推送到的远程分支名。<br>
-后续修改后再同步，只需要重复第4步。</p></div>
+后续修改后再同步，只需要重复第4步。同步其他文件夹，也可完全参考本文执行.</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，谢谢！</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

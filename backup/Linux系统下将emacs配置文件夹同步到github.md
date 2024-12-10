@@ -1,4 +1,4 @@
-# 1.在本地emacs配置文件夹初始化为一个新的Git仓库：
+# 1.将本地emacs配置文件夹初始化为一个新的Git仓库：
 ```Bash
 cd /home/yourdir/.emacs.d/
 git init
@@ -21,4 +21,4 @@ git commit -m "Your commit message"
 git push origin master
 ```
 替换 master 为要推送到的远程分支名。
-后续修改后再同步，只需要重复第4步。
+后续修改后再同步，只需要重复第4步。同步其他文件夹，也可完全参考本文执行.
