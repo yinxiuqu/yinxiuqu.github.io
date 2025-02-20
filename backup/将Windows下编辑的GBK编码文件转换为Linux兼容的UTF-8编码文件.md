@@ -10,5 +10,9 @@ iconv -f GBK -t UTF-8 windows_file.txt -o linux_file_utf8.txt
 # 批量转换当前目录下所有.txt文件
 for file in *.txt; do iconv -f GBK -t UTF-8 "$file" > "${file%.txt}_utf8.txt"; done
 ```
+若要覆盖源文件，则在终端运行：
+```bash
+iconv -f GBK -t UTF-8 input_file.txt -o temp.txt && mv temp.txt input_file.txt
+```
 也可利用Vim编辑器进行转换：
 在Linux中用Vim打开文件后执行:set fileencoding=utf-8保存即可。

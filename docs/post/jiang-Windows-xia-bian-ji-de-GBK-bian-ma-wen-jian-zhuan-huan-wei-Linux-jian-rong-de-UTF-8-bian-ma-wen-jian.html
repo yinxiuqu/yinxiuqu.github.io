@@ -91,6 +91,8 @@ iconv -f GBK -t UTF-8 windows_file.txt -o linux_file_utf8.txt
 
 <span class="pl-c"><span class="pl-c">#</span> 批量转换当前目录下所有.txt文件</span>
 <span class="pl-k">for</span> <span class="pl-smi">file</span> <span class="pl-k">in</span> <span class="pl-k">*</span>.txt<span class="pl-k">;</span> <span class="pl-k">do</span> iconv -f GBK -t UTF-8 <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$file</span><span class="pl-pds">"</span></span> <span class="pl-k">&gt;</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">${file<span class="pl-k">%</span>.txt}</span>_utf8.txt<span class="pl-pds">"</span></span><span class="pl-k">;</span> <span class="pl-k">done</span></pre></div>
+<p>若要覆盖源文件，则在终端运行：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">iconv -f GBK -t UTF-8 input_file.txt -o temp.txt <span class="pl-k">&amp;&amp;</span> mv temp.txt input_file.txt</pre></div>
 <p>也可利用Vim编辑器进行转换：<br>
 在Linux中用Vim打开文件后执行:set fileencoding=utf-8保存即可。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，谢谢！</div>
