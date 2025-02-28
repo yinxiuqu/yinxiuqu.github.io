@@ -83,11 +83,12 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>最近用了vscode使用copilot插件补全代码，很丝滑。能理解我程序编码上下文的意思，推算我接下来该写哪些代码。这和DeepSeek的通过文字描述直接给出一段功能代码是不同的。因为有些代码你是必须按自己的构想手写出来，一句一句审核，很多时候并不方便用文字去向AI描述一个功能。</p>
-<p>最不可思议的是，常常是一次性补全一大段代码，而且几乎没有错误。</p>
-<p>其次是模仿我编码的习惯，如LaTeX里我喜欢用\overline表示共轭，用\bm表示粗体向量，补全建议时，它都是模仿这些习惯的。</p>
-<p>第三是，在数学排版过程中，我列出代数式，它立即帮我把后面的计算步骤和计算结果都补全出来，而且是用LaTeX代码排版好。</p>
-<p>vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还真找到了copilot.el这个插件，我安装和配置如下：</p>
+<div class="markdown-body" id="postBody"><p>最近用了vscode使用copilot插件补全代码，很丝滑。能理解我程序编码上下文的意思，推算我接下来该写哪些代码。这和DeepSeek的通过文字描述直接给出一段功能代码是不同的。因为有些代码你是必须按自己的构想手写出来，一句一句审核，很多时候并不方便用文字去向AI描述一个功能。<br>
+最不可思议的是，常常是一次性补全一大段代码，而且几乎没有错误。<br>
+其次是模仿我编码的习惯，如LaTeX里我喜欢用\overline表示共轭，用\bm表示粗体向量，补全建议时，它都是模仿这些习惯的。<br>
+第三是，在数学排版过程中，我列出代数式，它立即帮我把后面的计算步骤和计算结果都补全出来，而且是用LaTeX代码排版好。<br>
+vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还真找到了copilot.el这个插件，我安装和配置如下：</p>
+<h1>1.配置文件</h1>
 <div class="highlight highlight-source-emacs-lisp"><pre class="notranslate"><span class="pl-c"><span class="pl-c">;</span>; 本文件用于配置AI</span>
 
 <span class="pl-c"><span class="pl-c">;</span>; 安装copilot.el</span>
@@ -115,7 +116,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <span class="pl-c"><span class="pl-c">;</span>; 文件结尾</span>
 (<span class="pl-c1">provide</span> <span class="pl-c1">'init-ai</span>)</pre></div>
-<p>这样设置后，copilot可以在elisp, python, LaTeX等语言上使用copilot补全了。</p></div>
+<h1>2.安装 Copilot 语言服务器</h1>
+<div class="highlight highlight-source-emacs-lisp"><pre class="notranslate">M-x copilot-install-server</pre></div>
+<p>这个过程比较久，要等它全部完成。</p>
+<h1>3.登录GitHub Copilot账户</h1>
+<div class="highlight highlight-source-emacs-lisp"><pre class="notranslate">M-x copilot-login</pre></div>
+<p>按提示登陆GitHub账户，输入权限验证码。<br>
+这样设置后，copilot可以在elisp, python, LaTeX等语言上使用copilot补全了。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，谢谢！</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
