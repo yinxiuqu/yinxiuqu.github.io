@@ -101,9 +101,12 @@ vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还
 (<span class="pl-c1">add-hook</span> <span class="pl-c1">'pyton-mode-hook</span> <span class="pl-c1">'copilot-mode</span>)
 (<span class="pl-c1">add-hook</span> <span class="pl-c1">'TeX-mode-hook</span> <span class="pl-c1">'copilot-mode</span>)
 
-<span class="pl-c"><span class="pl-c">;</span>; 使用tab键接受补全建议</span>
-(<span class="pl-c1">define-key</span> copilot-completion-map (<span class="pl-c1">kbd</span> <span class="pl-s"><span class="pl-pds">"</span>&lt;tab&gt;<span class="pl-pds">"</span></span>) <span class="pl-c1">'copilot-accept-completion</span>)
-(<span class="pl-c1">define-key</span> copilot-completion-map (<span class="pl-c1">kbd</span> <span class="pl-s"><span class="pl-pds">"</span>TAB<span class="pl-pds">"</span></span>) <span class="pl-c1">'copilot-accept-completion</span>)
+
+<span class="pl-c"><span class="pl-c">;</span>; Tab 键接受全部补全</span>
+(<span class="pl-c1">define-key</span> copilot-mode-map (<span class="pl-c1">kbd</span> <span class="pl-s"><span class="pl-pds">"</span>&lt;tab&gt;<span class="pl-pds">"</span></span>) <span class="pl-c1">'copilot-accept-completion</span>)
+  
+<span class="pl-c"><span class="pl-c">;</span>; Ctrl+→ 逐字符接受部分补全插入</span>
+(<span class="pl-c1">define-key</span> copilot-mode-map (<span class="pl-c1">kbd</span> <span class="pl-s"><span class="pl-pds">"</span>C-&lt;right&gt;<span class="pl-pds">"</span></span>) <span class="pl-c1">'copilot-accept-completion-by-word</span>)
 
 <span class="pl-c"><span class="pl-c">;</span>; 通用缩进规则（参考 Emacs C 代码缩进配置 ）</span>
 (<span class="pl-c1">setq-default</span> indent-tabs-mode <span class="pl-c1">nil</span>)  <span class="pl-c"><span class="pl-c">;</span> 禁用 Tab 符，使用空格缩进</span>
@@ -111,8 +114,9 @@ vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还
 
 <span class="pl-c"><span class="pl-c">;</span>; 特定语言模式缩进</span>
 (<span class="pl-c1">add-hook</span> <span class="pl-c1">'python-mode-hook</span> (<span class="pl-k">lambda</span> () (<span class="pl-k">setq</span> python-indent-offset <span class="pl-c1">4</span>)))
-(<span class="pl-c1">add-hook</span> <span class="pl-c1">'latex-mode-hook</span> (<span class="pl-k">lambda</span> () (<span class="pl-k">setq</span> LaTeX-indent-level <span class="pl-c1">4</span>)))
+(<span class="pl-c1">add-hook</span> <span class="pl-c1">'latex-mode-hook</span> (<span class="pl-k">lambda</span> () (<span class="pl-k">setq</span> LaTeX-indent-level <span class="pl-c1">2</span>)))
 (<span class="pl-c1">add-hook</span> <span class="pl-c1">'lisp-mode-hook</span> (<span class="pl-k">lambda</span> () (<span class="pl-k">setq</span> lisp-indent-offset <span class="pl-c1">4</span>)))
+
 
 <span class="pl-c"><span class="pl-c">;</span>; 文件结尾</span>
 (<span class="pl-c1">provide</span> <span class="pl-c1">'init-ai</span>)</pre></div>

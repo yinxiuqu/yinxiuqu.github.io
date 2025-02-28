@@ -17,9 +17,12 @@ vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还
 (add-hook 'pyton-mode-hook 'copilot-mode)
 (add-hook 'TeX-mode-hook 'copilot-mode)
 
-;; 使用tab键接受补全建议
-(define-key copilot-completion-map (kbd "<tab>") 'copilot-accept-completion)
-(define-key copilot-completion-map (kbd "TAB") 'copilot-accept-completion)
+
+;; Tab 键接受全部补全
+(define-key copilot-mode-map (kbd "<tab>") 'copilot-accept-completion)
+  
+;; Ctrl+→ 逐字符接受部分补全插入
+(define-key copilot-mode-map (kbd "C-<right>") 'copilot-accept-completion-by-word)
 
 ;; 通用缩进规则（参考 Emacs C 代码缩进配置 ）
 (setq-default indent-tabs-mode nil)  ; 禁用 Tab 符，使用空格缩进
@@ -27,8 +30,9 @@ vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还
 
 ;; 特定语言模式缩进
 (add-hook 'python-mode-hook (lambda () (setq python-indent-offset 4)))
-(add-hook 'latex-mode-hook (lambda () (setq LaTeX-indent-level 4)))
+(add-hook 'latex-mode-hook (lambda () (setq LaTeX-indent-level 2)))
 (add-hook 'lisp-mode-hook (lambda () (setq lisp-indent-offset 4)))
+
 
 ;; 文件结尾
 (provide 'init-ai)
