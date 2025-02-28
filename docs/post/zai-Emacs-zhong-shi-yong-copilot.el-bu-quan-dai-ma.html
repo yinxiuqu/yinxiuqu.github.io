@@ -108,15 +108,6 @@ vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还
 <span class="pl-c"><span class="pl-c">;</span>; Ctrl+→ 逐字符接受部分补全插入</span>
 (<span class="pl-c1">define-key</span> copilot-mode-map (<span class="pl-c1">kbd</span> <span class="pl-s"><span class="pl-pds">"</span>C-&lt;right&gt;<span class="pl-pds">"</span></span>) <span class="pl-c1">'copilot-accept-completion-by-word</span>)
 
-<span class="pl-c"><span class="pl-c">;</span>; 通用缩进规则（参考 Emacs C 代码缩进配置 ）</span>
-(<span class="pl-c1">setq-default</span> indent-tabs-mode <span class="pl-c1">nil</span>)  <span class="pl-c"><span class="pl-c">;</span> 禁用 Tab 符，使用空格缩进</span>
-(<span class="pl-c1">setq-default</span> tab-width <span class="pl-c1">4</span>)           <span class="pl-c"><span class="pl-c">;</span> Tab 宽度设为 4 空格</span>
-
-<span class="pl-c"><span class="pl-c">;</span>; 特定语言模式缩进</span>
-(<span class="pl-c1">add-hook</span> <span class="pl-c1">'python-mode-hook</span> (<span class="pl-k">lambda</span> () (<span class="pl-k">setq</span> python-indent-offset <span class="pl-c1">4</span>)))
-(<span class="pl-c1">add-hook</span> <span class="pl-c1">'latex-mode-hook</span> (<span class="pl-k">lambda</span> () (<span class="pl-k">setq</span> LaTeX-indent-level <span class="pl-c1">2</span>)))
-(<span class="pl-c1">add-hook</span> <span class="pl-c1">'lisp-mode-hook</span> (<span class="pl-k">lambda</span> () (<span class="pl-k">setq</span> lisp-indent-offset <span class="pl-c1">4</span>)))
-
 
 <span class="pl-c"><span class="pl-c">;</span>; 文件结尾</span>
 (<span class="pl-c1">provide</span> <span class="pl-c1">'init-ai</span>)</pre></div>
@@ -126,7 +117,9 @@ vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还
 <h1>3.登录GitHub Copilot账户</h1>
 <div class="highlight highlight-source-emacs-lisp"><pre class="notranslate">M-x copilot-login</pre></div>
 <p>按提示登陆GitHub账户，输入权限验证码。<br>
-这样设置后，copilot可以在elisp, python, LaTeX等语言上使用copilot补全了。</p></div>
+这样设置后，copilot可以在elisp, python, LaTeX等语言上使用copilot补全了，效果和vscode完全一样。但是，有个小警告我想了很多办法都一直无法消除，当前模式偏移量无法找到合适值：</p>
+<div class="highlight highlight-source-emacs-lisp"><pre class="notranslate">Warning (copilot): copilot--infer-indentation-offset found no mode-specific indentation offset. Disable showing Disable logging</pre></div>
+<p>我尝试过手工设置偏移量，全局模式和针对各特定模式都设置过，还是有这个警告。哪位帮忙看看如何消除。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">转载请注明出处，谢谢！</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>

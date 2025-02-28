@@ -24,15 +24,6 @@ vscode中能用了，就立即想到要在Emacs中实现。搜索了一下，还
 ;; Ctrl+→ 逐字符接受部分补全插入
 (define-key copilot-mode-map (kbd "C-<right>") 'copilot-accept-completion-by-word)
 
-;; 通用缩进规则（参考 Emacs C 代码缩进配置 ）
-(setq-default indent-tabs-mode nil)  ; 禁用 Tab 符，使用空格缩进
-(setq-default tab-width 4)           ; Tab 宽度设为 4 空格
-
-;; 特定语言模式缩进
-(add-hook 'python-mode-hook (lambda () (setq python-indent-offset 4)))
-(add-hook 'latex-mode-hook (lambda () (setq LaTeX-indent-level 2)))
-(add-hook 'lisp-mode-hook (lambda () (setq lisp-indent-offset 4)))
-
 
 ;; 文件结尾
 (provide 'init-ai)
@@ -47,4 +38,8 @@ M-x copilot-install-server
 M-x copilot-login
 ```
 按提示登陆GitHub账户，输入权限验证码。
-这样设置后，copilot可以在elisp, python, LaTeX等语言上使用copilot补全了。
+这样设置后，copilot可以在elisp, python, LaTeX等语言上使用copilot补全了，效果和vscode完全一样。但是，有个小警告我想了很多办法都一直无法消除，当前模式偏移量无法找到合适值：
+```emacs-lisp
+Warning (copilot): copilot--infer-indentation-offset found no mode-specific indentation offset. Disable showing Disable logging
+```
+我尝试过手工设置偏移量，全局模式和针对各特定模式都设置过，还是有这个警告。哪位帮忙看看如何消除。
