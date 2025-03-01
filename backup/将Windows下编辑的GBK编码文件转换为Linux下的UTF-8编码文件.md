@@ -16,3 +16,28 @@ iconv -f GBK -t UTF-8 input_file.txt -o temp.txt && mv temp.txt input_file.txt
 ```
 也可利用Vim编辑器进行转换：
 在Linux中用Vim打开文件后执行:set fileencoding=utf-8保存即可。
+如果文件分散在某个文件夹内及其各级子文件夹内，可以建立shell脚本一次性处理，创建一个名为 convert_gbk_to_utf8.sh 的文件，内容如下：
+```bash
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "Usage: $0 DIRECTORY"
+    exit 1
+fi
+
+DIR="$1"
+
+find "$DIR" -type f -name "*.tex" | while read -r file; do
+    iconv -f gbk -t utf-8 "$file" -o "${file}.tmp" && mv "${file}.tmp" "$file"
+    echo "Converted: $file"
+done
+```
+赋予脚本执行权限：
+```bash
+chmod +x convert_gbk_to_utf8.sh
+```
+在终端中运行命令，指定目标文件夹路径：
+```bash
+./convert_gbk_to_utf8.sh /path/to/texfiles
+```
+脚本会递归地找到所有 .tex 文件，并将其编码从 GBK 转换为 UTF-8。
