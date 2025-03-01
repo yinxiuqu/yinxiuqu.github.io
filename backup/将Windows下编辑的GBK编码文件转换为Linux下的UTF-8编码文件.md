@@ -14,8 +14,7 @@ for file in *.txt; do iconv -f GBK -t UTF-8 "$file" > "${file%.txt}_utf8.txt"; d
 ```bash
 iconv -f GBK -t UTF-8 input_file.txt -o temp.txt && mv temp.txt input_file.txt
 ```
-也可利用Vim编辑器进行转换：
-在Linux中用Vim打开文件后执行:set fileencoding=utf-8保存即可。
+也可利用Vim编辑器进行转换：在Linux中用Vim打开文件后执行:set fileencoding=utf-8保存即可。
 如果文件分散在某个文件夹内及其各级子文件夹内，可以建立shell脚本一次性处理，创建一个名为 convert_gbk_to_utf8.sh 的文件，内容如下：
 ```bash
 #!/bin/bash
