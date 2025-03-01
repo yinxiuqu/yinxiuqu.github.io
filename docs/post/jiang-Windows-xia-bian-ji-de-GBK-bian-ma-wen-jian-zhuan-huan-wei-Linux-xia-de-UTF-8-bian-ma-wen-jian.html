@@ -93,7 +93,7 @@ iconv -f GBK -t UTF-8 windows_file.txt -o linux_file_utf8.txt
 <span class="pl-k">for</span> <span class="pl-smi">file</span> <span class="pl-k">in</span> <span class="pl-k">*</span>.txt<span class="pl-k">;</span> <span class="pl-k">do</span> iconv -f GBK -t UTF-8 <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">$file</span><span class="pl-pds">"</span></span> <span class="pl-k">&gt;</span> <span class="pl-s"><span class="pl-pds">"</span><span class="pl-smi">${file<span class="pl-k">%</span>.txt}</span>_utf8.txt<span class="pl-pds">"</span></span><span class="pl-k">;</span> <span class="pl-k">done</span></pre></div>
 <p>若要覆盖源文件，则在终端运行：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate">iconv -f GBK -t UTF-8 input_file.txt -o temp.txt <span class="pl-k">&amp;&amp;</span> mv temp.txt input_file.txt</pre></div>
-<p>也可利用Vim编辑器进行转换：在Linux中用Vim打开文件后执行:set fileencoding=utf-8保存即可。<br>
+<p>也可利用Vim编辑器进行转换，在Linux中用Vim打开文件后执行：set fileencoding=utf-8保存即可。<br>
 如果文件分散在某个文件夹内及其各级子文件夹内，可以建立shell脚本一次性处理，创建一个名为 convert_gbk_to_utf8.sh 的文件，内容如下：</p>
 <div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#!</span>/bin/bash</span>
 
